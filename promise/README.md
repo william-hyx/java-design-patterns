@@ -3,6 +3,7 @@ layout: pattern
 title: Promise
 folder: promise
 permalink: /patterns/promise/
+pumlid: DOqv4i8m301xNW4FYDLJvIl2rYHYBDcZWtmVKr3jDZkxUw15IhyzM6lFHcdzVaPCVm8ONkNWEFELJbQ71ccKEWIuvuKhXJT-S6laVEWsCO9C7GHz2KmRmav0KVzUqgJCtsydROjV
 categories: Concurrency
 tags:
  - Java
@@ -26,7 +27,7 @@ in a synchronous way.
 Promise pattern is applicable in concurrent programming when some work needs to be done asynchronously
 and:
 
-* code maintainablity and readability suffers due to callback hell.
+* code maintainability and readability suffers due to callback hell.
 * you need to compose promises and need better error handling for asynchronous tasks.
 * you want to use functional style of programming.
 
@@ -43,4 +44,4 @@ and:
 ## Credits
 
 * [You are missing the point to Promises](https://gist.github.com/domenic/3889970)
-* [Functional style callbacks using CompleteableFuture](https://www.infoq.com/articles/Functional-Style-Callbacks-Using-CompletableFuture)
+* [Functional style callbacks using CompletableFuture](https://www.infoq.com/articles/Functional-Style-Callbacks-Using-CompletableFuture)

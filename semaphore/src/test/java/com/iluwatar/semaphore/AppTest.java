@@ -25,7 +25,10 @@ package com.iluwatar.semaphore;
 import org.junit.Test;
 import java.io.IOException;
 
-public class AppTest{
+/**
+ * Application Test Entrypoint
+ */
+public class AppTest {
   @Test
   public void test() throws IOException {
     String[] args = {};
