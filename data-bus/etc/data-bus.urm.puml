@@ -7,7 +7,6 @@ package com.iluwatar.databus {
     + setDataBus(dataBus : DataBus)
   }
   ~class App {
-    - log : Logger {static}
     ~ App()
     + main(args : String[]) {static}
   }
@@ -49,18 +48,24 @@ package com.iluwatar.databus.data {
   }
 }
 package com.iluwatar.databus.members {
-  class CounterMember {
-    - log : Logger {static}
+  class MessageCollectorMember {
+    - LOGGER : Logger {static}
+    - messages : List<String>
     - name : String
-    + CounterMember(name : String)
+    + MessageCollectorMember(name : String)
     + accept(data : DataType)
+    + getMessages() : List<String>
     - handleEvent(data : MessageData)
   }
   class StatusMember {
+    - LOGGER : Logger {static}
     - id : int
-    - log : Logger {static}
+    - started : LocalDateTime
+    - stopped : LocalDateTime
     + StatusMember(id : int)
     + accept(data : DataType)
+    + getStarted() : LocalDateTime
+    + getStopped() : LocalDateTime
     - handleEvent(data : StartingData)
     - handleEvent(data : StoppingData)
   }
@@ -72,6 +77,6 @@ AbstractDataType ..|> DataType
 MessageData --|> AbstractDataType 
 StartingData --|> AbstractDataType 
 StoppingData --|> AbstractDataType 
-CounterMember ..|> Member 
+MessageCollectorMember ..|> Member 
 StatusMember ..|> Member 
 @enduml

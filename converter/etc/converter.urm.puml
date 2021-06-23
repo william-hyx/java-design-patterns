@@ -1,6 +1,7 @@
 @startuml
 package com.iluwatar.converter {
   class App {
+    - LOGGER : Logger {static}
     + App()
     + main(args : String[]) {static}
   }
@@ -8,10 +9,10 @@ package com.iluwatar.converter {
     - fromDto : Function<T, U>
     - fromEntity : Function<U, T>
     + Converter<T, U>(fromDto : Function<T, U>, fromEntity : Function<U, T>)
-    + convertFromDto(userDto : T) : U
-    + convertFromEntity(user : U) : T
-    + createFromDtos(dtoUsers : Collection<T>) : List<U>
-    + createFromEntities(users : Collection<U>) : List<T>
+    + convertFromDto(dto : T) : U
+    + convertFromEntity(entity : U) : T
+    + createFromDtos(dtos : Collection<T>) : List<U>
+    + createFromEntities(entities : Collection<U>) : List<T>
   }
   class User {
     - firstName : String

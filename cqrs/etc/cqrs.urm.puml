@@ -10,6 +10,7 @@ package com.iluwatar.cqrs.util {
 }
 package com.iluwatar.cqrs.app {
   class App {
+    - LOGGER : Logger {static}
     + App()
     + main(args : String[]) {static}
   }
@@ -80,6 +81,15 @@ package com.iluwatar.cqrs.queries {
     + getAuthorByUsername(username : String) : Author
     + getAuthorsCount() : BigInteger
     + getBook(title : String) : Book
+  }
+}
+package com.iluwatar.cqrs.constants {
+  class AppConstants {
+    + E_EVANS : String {static}
+    + J_BLOCH : String {static}
+    + M_FOWLER : String {static}
+    + USER_NAME : String {static}
+    + AppConstants()
   }
 }
 package com.iluwatar.cqrs.domain.model {

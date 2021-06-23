@@ -1,5 +1,4 @@
 @startuml
-left to right direction
 package com.iluwatar.observer {
   class App {
     - LOGGER : Logger {static}
@@ -34,7 +33,9 @@ package com.iluwatar.observer {
     + RAINY {static}
     + SUNNY {static}
     + WINDY {static}
+    + description String
     + toString() : String
+    + getDescription() : String
     + valueOf(name : String) : WeatherType {static}
     + values() : WeatherType[] {static}
   }

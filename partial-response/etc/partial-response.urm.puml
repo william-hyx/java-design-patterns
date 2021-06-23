@@ -1,5 +1,10 @@
 @startuml
 package com.iluwatar.partialresponse {
+  class App {
+    - LOGGER : Logger {static}
+    + App()
+    + main(args : String[]) {static}
+  }
   class FieldJsonMapper {
     + FieldJsonMapper()
     - getString(video : Video, declaredField : Field) : String
@@ -12,13 +17,8 @@ package com.iluwatar.partialresponse {
     - language : String
     - length : Integer
     - title : String
-    + Video(id : Integer, title : String, length : Integer, description : String, director : String, language : String)
+    + Video(id : Integer, title : String, len : Integer, desc : String, director : String, lang : String)
     + toString() : String
-  }
-  class VideoClientApp {
-    - LOGGER : Logger {static}
-    + VideoClientApp()
-    + main(args : String[]) {static}
   }
   class VideoResource {
     - fieldJsonMapper : FieldJsonMapper

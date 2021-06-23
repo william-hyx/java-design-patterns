@@ -1,6 +1,7 @@
 @startuml
 package com.iluwatar.datatransfer {
   class CustomerClientApp {
+    - LOGGER : Logger {static}
     + CustomerClientApp()
     + main(args : String[]) {static}
     - printCustomerDetails(allCustomers : List<CustomerDto>) {static}
